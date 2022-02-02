@@ -26,6 +26,13 @@ public class AgedBrieItemTest{
         assertEquals(9, item.getQuality());
     }
 
+    @Test
+    public void AgedBrieDecreaseSellIn() {
+        AgedBrieItem item = new AgedBrieItem("Aged Brie", 5, 7);
+        for (int i = 0; i < 4; i++){item.updateQuality();}
+        assertEquals(1, item.getSellIn());
+    }
+
 
     
 }
