@@ -1,6 +1,6 @@
 package edu.elsmancs.gildedrose.domain;
 
-final class Item {
+public final class Item {
     
     // Attributes
     protected final String name;
