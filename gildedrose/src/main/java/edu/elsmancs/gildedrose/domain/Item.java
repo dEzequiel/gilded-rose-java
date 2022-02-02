@@ -27,6 +27,14 @@ final class Item {
         return this.quality;
     }
 
+    void setQuality(int amount) {
+        this.quality = amount;
+    }
+
+    void improveQuality(int amount) {
+        this.quality += amount;
+    }
+
     @Override
     public String toString() {
         StringBuilder itemDescription = new StringBuilder();
