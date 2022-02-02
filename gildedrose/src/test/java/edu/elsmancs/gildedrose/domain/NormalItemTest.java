@@ -19,7 +19,12 @@ public class NormalItemTest{
         assertEquals(0, item.getQuality(), 7);
     }
 
-
+    @Test
+    public void normalItemSellInNotZero() {
+        NormalItem item = new NormalItem("Elixir of the Mongoose", 1, 7);
+        item.updateQuality();
+        assertEquals(6, item.getQuality(), 7);
+    }
 
     
 }
