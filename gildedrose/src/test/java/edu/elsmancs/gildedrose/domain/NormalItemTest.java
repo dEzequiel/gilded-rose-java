@@ -29,10 +29,15 @@ public class NormalItemTest{
     @Test
     public void normalItemDecreaseSellIn() {
         NormalItem item = new NormalItem("Elixir of the Mongoose", 5, 7);
-        
         for (int i = 0; i < 4; i++){item.updateQuality();}
-        
         assertEquals(1, item.getSellIn());
+    }
+
+    @Test
+    public void normalItemDecreaseQuality() {
+        NormalItem item = new NormalItem("Elixir of the Mongoose", 5, 7);
+        for (int i = 0; i < 4; i++){item.updateQuality();}
+        assertEquals(3, item.getQuality());
     }
 
     
