@@ -19,7 +19,7 @@ public class NormalItem implements Updateable {
         return item.name;
     }
 
-    void setSellIn() {
+    void decreaseSellIn() {
         item.sellIn = getSellIn() - 1;
     }
 
@@ -57,13 +57,11 @@ public class NormalItem implements Updateable {
     //     return item.name + ", " + item.sellIn + ", " + item.quality;
     // }
 
-    // public static void main( String[] args )
-    // {
-    //     NormalItem x = new NormalItem("Elixir of the Mongoose", 5, 7);
-    //     for (int i = 0; i < 10; i++) {
-    //         x.updateQuality();
-    //         System.out.print(x + "\n");
-    //     }
+    public static void main( String[] args )
+    {
+        for (int i = 0; i < 10; i++) {
+            System.out.print(i);
+        }
         
-    // }
+    }
 }
