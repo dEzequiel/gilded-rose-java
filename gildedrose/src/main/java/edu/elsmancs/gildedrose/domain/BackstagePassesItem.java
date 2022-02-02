@@ -18,6 +18,8 @@ public class BackstagePassesItem extends NormalItem {
         } else {
             improveQuality(1);
         }
+
+        decreaseSellIn();
     }
     
 }  
