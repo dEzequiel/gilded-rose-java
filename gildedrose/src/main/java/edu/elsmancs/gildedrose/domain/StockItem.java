@@ -1,31 +1,44 @@
 package edu.elsmancs.gildedrose.domain;
 
-public class StockItem implements Updateable {
+public class StockItem extends Item implements Updateable{
 
-    private final Item item;
-
-    public StockItem(String name, int sellIn, int quality) {
-        this.item = new Item(name, sellIn, quality);
-    }
-
-    @Override
-    public String toString() {
-        return item.toString();
+    StockItem(String name, int sellIn, int quality) {
+        super(name, sellIn, quality);
+        //TODO Auto-generated constructor stub
     }
 
-    public int getSellIn(){
-        return item.getSellIn();
+    int getSellIn() {
+        return this.sellIn;
     }
-    public int getQuality(){
-        return item.getQuality();
+    int getQuality(){
+        return this.quality;
     }
-    void setQuality(){
-        item.setQuality(0);
+
+    void setSellIn() {
+        this.sellIn = this.getSellIn() - 1;
     }
-    
+
+    void setQuality(int amount) {
+        this.quality = amount;
+    }
+
+    void improveQuality(int amount) {
+        this.quality += amount;
+        this.qualityChecker();
+    }
+    void reduceQuality(int amount) {
+        this.quality -= amount;
+    }
+    void qualityChecker(){
+        if (this.getQuality() > 50) {
+            this.setQuality(50);
+        }
+    }
+
     @Override
     public void updateQuality() {
         // TODO Auto-generated method stub
+        
     }
     
 }
