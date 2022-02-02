@@ -14,4 +14,18 @@ final class Item {
         this.quality = quality;
     }
 
+    // Getters methods for override
+    String getName() {
+        return this.name;
+    }
+
+    int getSellIn() {
+        return this.sellIn;
+    }
+
+    int getQuality() {
+        return this.quality;
+    }
+
+
 }
