@@ -33,7 +33,7 @@ public class BackstagePassesItemTest {
         BackstagePassesItem item = new BackstagePassesItem("Backstage passes to a TAFKAL80ETC concert", 0, 20);
         item.updateQuality();
         assertEquals(0, item.getQuality());
-        assertEquals(0, item.getSellIn());
+        assertEquals(-1, item.getSellIn());
     }
 
     @Test
