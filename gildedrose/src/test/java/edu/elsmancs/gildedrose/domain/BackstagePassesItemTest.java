@@ -35,4 +35,12 @@ public class BackstagePassesItemTest {
         assertEquals(0, item.getQuality());
         assertEquals(0, item.getSellIn());
     }
+
+    @Test
+    public void sellInGreaterTenDays() {
+        BackstagePassesItem item = new BackstagePassesItem("Backstage passes to a TAFKAL80ETC concert", 15, 20);
+        item.updateQuality()
+        assertEquals(21, item.getQuality());
+        assertEquals(14, item.getSellIn());
+    }
 }
