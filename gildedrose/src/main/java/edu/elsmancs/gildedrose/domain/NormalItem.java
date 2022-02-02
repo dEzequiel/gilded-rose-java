@@ -48,7 +48,7 @@ public class NormalItem implements Updateable {
         else {
             reduceQuality(1);
         }
-        setSellIn();
+        decreaseSellIn();
 
     } 
     
