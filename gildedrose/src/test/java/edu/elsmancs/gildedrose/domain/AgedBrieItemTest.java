@@ -12,6 +12,13 @@ public class AgedBrieItemTest{
         assertEquals("Aged Brie", item.getName());
     }
 
+    @Test
+    public void AgedBrieSellInZero() {
+        AgedBrieItem item = new AgedBrieItem("Aged Brie", 0, 0);
+        item.updateQuality();
+        assertEquals(1, item.getQuality());
+    }
+
 
     
 }
