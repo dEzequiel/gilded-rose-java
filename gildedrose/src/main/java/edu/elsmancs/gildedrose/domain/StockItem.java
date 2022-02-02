@@ -9,6 +9,11 @@ public class StockItem implements Updateable {
     }
 
     @Override
+    public String toString() {
+        return item.toString();
+    }
+
+    @Override
     public void updateQuality() {
         // TODO Auto-generated method stub
     }
