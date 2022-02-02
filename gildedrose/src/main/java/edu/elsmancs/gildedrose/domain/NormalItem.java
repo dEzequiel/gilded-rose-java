@@ -15,6 +15,9 @@ public class NormalItem implements Updateable {
     int getQuality(){
         return item.quality;
     }
+    String getName(){
+        return item.name;
+    }
 
     void setSellIn() {
         item.sellIn = getSellIn() - 1;
