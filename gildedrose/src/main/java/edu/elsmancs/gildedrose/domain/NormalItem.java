@@ -1,33 +1,66 @@
 package edu.elsmancs.gildedrose.domain;
 
-public class NormalItem extends StockItem {
+public class NormalItem implements Updateable {
 
-    NormalItem(String name, int sellIn, int quality) {
-        super(name, sellIn, quality);
+    private final Item item;
+    
+    public NormalItem(String name, int sellIn, int quality) {
+        this.item = new Item(name, sellIn, quality);
         //TODO Auto-generated constructor stub
     }
 
-    private StockItem item;
+    int getSellIn() {
+        return item.sellIn;
+    }
+    int getQuality(){
+        return item.quality;
+    }
+
+    void setSellIn() {
+        item.sellIn = getSellIn() - 1;
+    }
+
+    void setQuality(int amount) {
+        item.quality = amount;
+    }
+
+    void improveQuality(int amount) {
+        item.quality += amount;
+        qualityChecker();
+    }
+    void reduceQuality(int amount) {
+        item.quality -= amount;
+    }
+    void qualityChecker(){
+        if (getQuality() > 50) {
+            setQuality(50);
+        }
+    }
 
     @Override
     public void updateQuality() {
-        if(this.getSellIn() <= 0) {
-            this.setQuality(0);
+        if(getSellIn() <= 0) {
+            setQuality(0);
         } 
         else {
-            this.reduceQuality(1);
+            reduceQuality(1);
         }
-        this.setSellIn();
+        setSellIn();
 
-    }  
+    } 
+    
+    // @Override
+    // public String toString() {
+    //     return item.name + ", " + item.sellIn + ", " + item.quality;
+    // }
 
-    public static void main( String[] args )
-    {
-        NormalItem x = new NormalItem("Elixir of the Mongoose", 5, 7);
-        for (int i = 0; i < 10; i++) {
-            x.updateQuality();
-            System.out.print(x + "\n");
-        }
+    // public static void main( String[] args )
+    // {
+    //     NormalItem x = new NormalItem("Elixir of the Mongoose", 5, 7);
+    //     for (int i = 0; i < 10; i++) {
+    //         x.updateQuality();
+    //         System.out.print(x + "\n");
+    //     }
         
-    }
+    // }
 }
