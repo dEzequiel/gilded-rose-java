@@ -13,6 +13,16 @@ public class StockItem implements Updateable {
         return item.toString();
     }
 
+    public int getSellIn(){
+        return item.getSellIn();
+    }
+    public int getQuality(){
+        return item.getQuality();
+    }
+    void setQuality(){
+        item.setQuality(0);
+    }
+    
     @Override
     public void updateQuality() {
         // TODO Auto-generated method stub
