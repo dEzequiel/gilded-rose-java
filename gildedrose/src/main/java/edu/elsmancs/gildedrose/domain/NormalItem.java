@@ -57,11 +57,4 @@ public class NormalItem implements Updateable {
         return item.name + ", " + item.sellIn + ", " + item.quality;
     }
 
-    public static void main( String[] args )
-    {
-        for (int i = 0; i < 10; i++) {
-            System.out.print(i);
-        }
-        
-    }
 }
