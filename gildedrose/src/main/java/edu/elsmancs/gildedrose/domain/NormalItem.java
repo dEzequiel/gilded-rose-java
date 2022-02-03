@@ -52,10 +52,10 @@ public class NormalItem implements Updateable {
 
     } 
     
-    // @Override
-    // public String toString() {
-    //     return item.name + ", " + item.sellIn + ", " + item.quality;
-    // }
+    @Override
+    public String toString() {
+        return item.name + ", " + item.sellIn + ", " + item.quality;
+    }
 
     public static void main( String[] args )
     {
