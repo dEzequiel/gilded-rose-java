@@ -7,6 +7,7 @@ public class NormalItem implements Updateable {
     public NormalItem(String name, int sellIn, int quality) {
         this.item = new Item(name, sellIn, quality);
     }
+    
 
     int getSellIn() {
         return item.sellIn;
