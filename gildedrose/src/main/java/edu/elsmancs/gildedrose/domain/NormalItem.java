@@ -6,7 +6,6 @@ public class NormalItem implements Updateable {
     
     public NormalItem(String name, int sellIn, int quality) {
         this.item = new Item(name, sellIn, quality);
-        //TODO Auto-generated constructor stub
     }
 
     int getSellIn() {
